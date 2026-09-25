@@ -98,6 +98,21 @@
     border-radius: 999px; background: var(--accent-soft); color: var(--accent); margin-left: 6px;
   }
 
+  .samples { display: grid; gap: 16px; margin-top: 8px; }
+  .sample {
+    display: grid; grid-template-columns: 220px 1fr; overflow: hidden;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    color: var(--text); text-decoration: none; transition: border-color .15s, transform .15s;
+  }
+  .sample:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .thumb { background: var(--accent-soft); border-right: 1px solid var(--line); display: grid; place-items: center; padding: 16px; }
+  .thumb img { max-width: 100%; max-height: 190px; display: block; box-shadow: 0 1px 4px rgba(0,0,0,.18); border-radius: 2px; }
+  .sample-body { padding: 18px 20px; }
+  .sample h3 { margin: 4px 0 8px; font-size: 16px; line-height: 1.4; }
+  .sample p { color: var(--muted); font-size: 15px; margin: 0 0 10px; }
+  .kind { font-size: 12px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--accent); }
+  .open { font-size: 14px; font-weight: 500; color: var(--accent); }
+
   .edu div { display: flex; justify-content: space-between; gap: 16px; padding: 8px 0; }
   .edu span { color: var(--muted); white-space: nowrap; }
 
@@ -109,6 +124,9 @@
     .photo { width: 112px; height: 112px; flex-basis: 112px; font-size: 34px; }
     h1 { font-size: 32px; }
     .grid { grid-template-columns: 1fr; }
+    .sample { grid-template-columns: 1fr; }
+    .thumb { border-right: 0; border-bottom: 1px solid var(--line); }
+    .thumb img { max-height: 170px; }
     .edu div { flex-direction: column; gap: 0; }
     nav a.opt, nav .brand { display: none; }
     nav .wrap { justify-content: space-between; }
@@ -142,7 +160,7 @@
         <p class="tagline">Neuroscientist &amp; science communicator · Epilepsy and neurology</p>
         <div class="links">
           <a class="btn primary" href="https://www.linkedin.com/in/yun-lien-rebecca" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn" href="https://bit.ly/YunLien_WritingSample" target="_blank" rel="noopener">Writing samples</a>
+          <a class="btn" href="#writing">Writing samples</a>
           <a class="btn" href="https://orcid.org/0000-0001-8135-1651" target="_blank" rel="noopener">ORCID</a>
         </div>
       </div>
@@ -212,8 +230,36 @@
 
   <section id="writing">
     <h2>Writing samples</h2>
-    <p>A small portfolio of work written for non-academic audiences, including a therapeutic landscape snapshot on comorbid depression in idiopathic generalized epilepsy, a slide deck adapted from my <em>Epilepsia Open</em> paper, and a scientific poster.</p>
-    <a class="btn primary" href="https://bit.ly/YunLien_WritingSample" target="_blank" rel="noopener">View writing samples →</a>
+    <p>A landscape analysis, a slide deck, and a congress poster, each written for a different audience.</p>
+    <div class="samples">
+      <a class="sample" href="samples/YunLien_TherapeuticLandscape_IGE_2026.pdf" target="_blank" rel="noopener">
+        <div class="thumb"><img src="samples/YunLien_TherapeuticLandscape_IGE_2026.jpg" alt="First page of the therapeutic landscape snapshot" loading="lazy"></div>
+        <div class="sample-body">
+          <span class="kind">Therapeutic landscape snapshot · 5 pages</span>
+          <h3>Comorbid depression in idiopathic generalized epilepsy and the parallel development of azetukalner</h3>
+          <p>Reviews the evidence on epilepsy–depression comorbidity, compares the separate seizure and mood trial programs for azetukalner, and sets out what that means for real-world data and trial readouts.</p>
+          <span class="open">Read PDF →</span>
+        </div>
+      </a>
+      <a class="sample" href="samples/YunLien_SlideDeck_CBF-Mood-IGE_2026.pdf" target="_blank" rel="noopener">
+        <div class="thumb"><img src="samples/YunLien_SlideDeck_CBF-Mood-IGE_2026.jpg" alt="Title slide of the cerebral blood flow slide deck" loading="lazy"></div>
+        <div class="sample-body">
+          <span class="kind">Slide deck · 9 slides</span>
+          <h3>Cerebral blood flow as a potential biomarker of mood disturbance in idiopathic generalized epilepsy</h3>
+          <p>Adapts my <em>Epilepsia Open</em> paper for a clinical audience, including a slide on what the data can and cannot support.</p>
+          <span class="open">View slides →</span>
+        </div>
+      </a>
+      <a class="sample" href="samples/YunLien_Poster_AES2023.pdf" target="_blank" rel="noopener">
+        <div class="thumb"><img src="samples/YunLien_Poster_AES2023.jpg" alt="Congress poster on cerebral blood flow and mood in idiopathic generalized epilepsy" loading="lazy"></div>
+        <div class="sample-body">
+          <span class="kind">Congress poster · American Epilepsy Society</span>
+          <h3>Cerebral blood flow differences and mood in idiopathic generalized epilepsy</h3>
+          <p>First-author poster I presented and laid out myself. It reports the early findings that later became my <em>Epilepsia Open</em> paper.</p>
+          <span class="open">View poster →</span>
+        </div>
+      </a>
+    </div>
   </section>
 
   <section id="education">
